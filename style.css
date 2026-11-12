@@ -1241,3 +1241,149 @@ footer {
     }
 
 }
+
+/* =====================================
+   COSMICKON UPDATE: CLEAN SCROLL + EVENT LINKS
+===================================== */
+
+/* Hide browser scrollbars while preserving touch/trackpad scrolling. */
+.pages-container,
+.page,
+html,
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.pages-container::-webkit-scrollbar,
+.page::-webkit-scrollbar,
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+/* Keep horizontal page movement smooth and hide any visual page indicators. */
+.pages-container {
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+}
+.page {
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+footer {
+    justify-content: flex-end;
+}
+.dots {
+    display: none !important;
+}
+
+/* User-supplied home artwork: place the file at images/cosmickon-home.jpg. */
+.hero-panel {
+    isolation: isolate;
+}
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+.hero-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #17132330, #17132355);
+    z-index: -1;
+}
+.hero-panel:has(.hero-image) {
+    background: #6d4b87;
+}
+
+/* Clickable event blocks on the About page. */
+.event-hint {
+    color: #f4d34e;
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: -5px;
+}
+.event-jump {
+    width: 100%;
+    border: 3px solid #09060f;
+    box-shadow: 5px 5px #0008;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.event-jump:hover,
+.event-jump:focus-visible {
+    transform: translateY(-3px) rotate(-1deg);
+    box-shadow: 7px 8px #0008;
+    outline: 3px solid #f4d34e;
+    outline-offset: 2px;
+}
+.event-description {
+    font-size: .72rem !important;
+    line-height: 1.5 !important;
+    margin: 7px 0 !important;
+}
+.event:target {
+    outline: 4px solid #f4d34e;
+    outline-offset: 4px;
+}
+.find-us-social {
+    display: block;
+    margin-top: 7px;
+    font-weight: 800;
+}
+.find-us-social a {
+    color: #ff91c3;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Schedule: reserve separate space for both day cards and the announcement. */
+#schedule {
+    justify-content: flex-start;
+    align-items: stretch;
+    overflow-y: auto;
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+#schedule .schedule {
+    flex: 0 0 auto;
+    align-items: stretch;
+}
+#schedule .schedule .paper {
+    min-width: 0;
+    height: auto;
+}
+#schedule .notice {
+    position: static;
+    flex: 0 0 auto;
+    margin-top: 10px;
+}
+#schedule .tentative {
+    display: block;
+    flex: 0 0 auto;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 700px) {
+    .event-hint { font-size: .62rem; }
+    .event-description { font-size: .76rem !important; }
+    #schedule {
+        justify-content: flex-start;
+        overflow-y: auto;
+    }
+    #schedule .schedule {
+        grid-template-columns: 1fr;
+    }
+    #schedule .notice {
+        margin-top: 8px;
+    }
+    .find-us-social { margin-top: 8px; }
+}
