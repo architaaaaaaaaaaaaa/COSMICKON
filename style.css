@@ -1470,4 +1470,20 @@ footer {
     }
 }
 
+/* COSMICKON EVENT TITLE COLOURS */
+
+#events .art {
+    color: #7135A5 !important;
+    -webkit-text-fill-color: #7135A5 !important;
+    text-shadow: 3px 3px 0 #F2A6D8 !important;
+    -webkit-text-stroke: 0 transparent;
+}
+
+#events .art small {
+    color: #7135A5 !important;
+    -webkit-text-fill-color: #7135A5 !important;
+    text-shadow: none !important;
+}
+
+
 
