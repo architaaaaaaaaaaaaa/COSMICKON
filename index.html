@@ -84,6 +84,8 @@
 
         <div class="hero-panel">
 
+            <img class="hero-image" src="images/cosmickon-home.jpg" alt="COSMICKON festival artwork">
+            <div class="hero-image-overlay"></div>
             <div class="planet"></div>
 
             <div class="hero-words">
@@ -122,6 +124,7 @@
         <p class="lead">
             Every universe has a story. Here's ours.
         </p>
+        <p class="event-hint">CLICK AN EVENT BELOW TO EXPLORE ITS DETAILS ↘</p>
 
 
         <div class="about-grid">
@@ -153,23 +156,23 @@
 
             <div class="stack">
 
-                <article class="mini blue">
-                    <b>01 / PLAY</b>
+                <button class="mini blue event-jump" type="button" data-event-target="xwarfare">
+                    <b>01 / PLAY · CLICK TO EXPLORE ↗</b>
                     <strong>X WARFARE</strong>
                     <span>Bring your squad. Own the game.</span>
-                </article>
+                </button>
 
-                <article class="mini pink">
-                    <b>02 / CREATE</b>
+                <button class="mini pink event-jump" type="button" data-event-target="xpression">
+                    <b>02 / CREATE · CLICK TO EXPLORE ↗</b>
                     <strong>XPRESSION</strong>
                     <span>Turn imagination into art.</span>
-                </article>
+                </button>
 
-                <article class="mini purple">
-                    <b>03 / INVESTIGATE</b>
+                <button class="mini purple event-jump" type="button" data-event-target="lastSuspect">
+                    <b>03 / INVESTIGATE · CLICK TO EXPLORE ↗</b>
                     <strong>THE LAST SUSPECT</strong>
                     <span>Follow the clues. Find the truth.</span>
-                </article>
+                </button>
 
             </div>
 
@@ -195,7 +198,7 @@
 
             <!-- X WARFARE -->
 
-            <article class="event blue">
+            <article class="event blue" id="xwarfare">
 
                 <div class="art">
                     XW!
@@ -210,6 +213,7 @@
 
                     <b>EXVERSE ESPORTS CHAMPIONSHIP</b>
 
+                    <p class="event-description">Build your squad and compete in the COSMICKON esports championship. Teams of four can battle it out in BGMI or Free Fire, progress through the matches and aim for the top spot.</p>
                     <p>BGMI & Free Fire · Team of 4</p>
 
                     <p>₹200 / team · 9 AM–4 PM</p>
@@ -248,7 +252,7 @@
 
             <!-- XPRESSION -->
 
-            <article class="event pink">
+            <article class="event pink" id="xpression">
 
                 <div class="art">
                     XP!
@@ -263,6 +267,7 @@
 
                     <b>SKETCHING & DIGITAL ART</b>
 
+                    <p class="event-description">Show your creativity through sketching or digital art. Xpression is an individual contest where participants can turn an idea into an original visual creation.</p>
                     <p>Individual participation</p>
 
                     <p>₹30 / participant · 9 AM–12 PM</p>
@@ -301,7 +306,7 @@
 
             <!-- THE LAST SUSPECT -->
 
-            <article class="event purple">
+            <article class="event purple" id="lastSuspect">
 
                 <div class="art">
                     ?!
@@ -316,6 +321,7 @@
 
                     <b>LIVE-ACTION MURDER MYSTERY</b>
 
+                    <p class="event-description">Step into a live-action mystery, work together with your team, examine the clues and use your reasoning to uncover the truth. Every detail could matter.</p>
                     <p>Team of 3</p>
 
                     <p>₹150 / team · 1–4:30 PM</p>
@@ -513,6 +519,7 @@
             REVA University · Rukmini Knowledge Park,
             Kattigenahalli, Yelahanka,
             Bengaluru – 560064
+            <span class="find-us-social">INSTAGRAM: <a href="https://www.instagram.com/PASTE_CLUB_USERNAME/" target="_blank" rel="noopener noreferrer">@PASTE_CLUB_USERNAME ↗</a></span>
 
         </p>
 
@@ -528,33 +535,6 @@
 <footer>
 
     <span id="count">PAGE 01 / 05</span>
-
-
-    <div class="dots">
-
-        <button class="selected"
-                data-page="home"
-                aria-label="Home">
-        </button>
-
-        <button data-page="about"
-                aria-label="About">
-        </button>
-
-        <button data-page="events"
-                aria-label="Explore Events">
-        </button>
-
-        <button data-page="schedule"
-                aria-label="Schedule">
-        </button>
-
-        <button data-page="contact"
-                aria-label="Contact">
-        </button>
-
-    </div>
-
 </footer>
 
 
