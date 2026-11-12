@@ -1,264 +1,124 @@
-
 const order = ['home', 'about', 'events', 'schedule', 'contact'];
-
 let index = 0;
 
 const container = document.getElementById('pagesContainer');
-const pages = document.querySelectorAll('.page');
 const nav = document.getElementById('nav');
 const menu = document.getElementById('menu');
 const count = document.getElementById('count');
 
-
-// HORIZONTAL PAGE NAVIGATION
+function updateNavigation(name) {
+    document.querySelectorAll('nav [data-page]').forEach(button => {
+        button.classList.toggle('active', button.dataset.page === name);
+    });
+    if (count) count.textContent = `PAGE ${String(index + 1).padStart(2, '0')} / 05`;
+    if (nav) nav.classList.remove('open');
+    if (menu) menu.textContent = '☰';
+}
 
 function go(name) {
-
     const newIndex = order.indexOf(name);
-
-    if (newIndex < 0) return;
-
+    if (newIndex < 0 || !container) return;
     index = newIndex;
-
-    const targetPage = document.getElementById(name);
-
-    container.scrollTo({
-        left: targetPage.offsetLeft - container.offsetLeft,
-        behavior: 'smooth'
-    });
-
+    container.scrollTo({ left: index * container.clientWidth, behavior: 'smooth' });
     updateNavigation(name);
-
 }
 
-
-// UPDATE MENU, DOTS AND PAGE COUNTER
-
-function updateNavigation(name) {
-
-    document.querySelectorAll('[data-page]').forEach(button => {
-
-        button.classList.toggle(
-            'active',
-            button.dataset.page === name
-        );
-
-    });
-
-
-    document.querySelectorAll('.dots button').forEach(button => {
-
-        button.classList.toggle(
-            'selected',
-            button.dataset.page === name
-        );
-
-    });
-
-
-    count.textContent =
-        `PAGE ${String(index + 1).padStart(2, '0')} / 05`;
-
-    nav.classList.remove('open');
-
-    menu.textContent = '☰';
-
-}
-
-
-// TOP MENU AND NAVIGATION DOTS
-
-document.querySelectorAll('[data-page]').forEach(button => {
-
-    button.addEventListener('click', () => {
-
-        go(button.dataset.page);
-
-    });
-
-});
-
-
-// MOBILE MENU BUTTON
-
-menu.addEventListener('click', () => {
-
-    nav.classList.toggle('open');
-
-    menu.textContent =
-        nav.classList.contains('open') ? '✕' : '☰';
-
-});
-
-
-// UPDATE PAGE COUNTER WHEN SCROLLING MANUALLY
-
-let scrollTimer;
-
-container.addEventListener('scroll', () => {
-
-    clearTimeout(scrollTimer);
-
-    scrollTimer = setTimeout(() => {
-
-        const containerWidth = container.clientWidth;
-
-        const newIndex = Math.round(
-            container.scrollLeft / containerWidth
-        );
-
-        if (newIndex >= 0 && newIndex < order.length) {
-
-            index = newIndex;
-
-            updateNavigation(order[index]);
-
-        }
-
-    }, 100);
-
-});
-
-
-// PHONE SWIPE SUPPORT
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-container.addEventListener('touchstart', event => {
-
-    touchStartX = event.changedTouches[0].screenX;
-
-}, { passive: true });
-
-
-container.addEventListener('touchend', event => {
-
-    touchEndX = event.changedTouches[0].screenX;
-
-    const difference = touchStartX - touchEndX;
-
-    if (Math.abs(difference) < 50) return;
-
-    if (difference > 0 && index < order.length - 1) {
-
-        go(order[index + 1]);
-
-    }
-
-    else if (difference < 0 && index > 0) {
-
-        go(order[index - 1]);
-
-    }
-
-}, { passive: true });
-
-
-// MOUSE WHEEL HORIZONTAL NAVIGATION
-
-container.addEventListener('wheel', event => {
-
-    if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
-
+// Header navigation and the home-page call-to-action.
+document.querySelectorAll('nav [data-page], .logo[data-page], .copy [data-page]').forEach(button => {
+    button.addEventListener('click', event => {
         event.preventDefault();
+        go(button.dataset.page);
+    });
+});
 
-        container.scrollLeft += event.deltaY;
+if (menu && nav) {
+    menu.addEventListener('click', () => {
+        nav.classList.toggle('open');
+        menu.textContent = nav.classList.contains('open') ? '✕' : '☰';
+    });
+}
 
-    }
+// Update the page counter after a manual horizontal swipe/scroll.
+let scrollTimer;
+if (container) {
+    container.addEventListener('scroll', () => {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+            const width = container.clientWidth || 1;
+            const nextIndex = Math.max(0, Math.min(order.length - 1, Math.round(container.scrollLeft / width)));
+            index = nextIndex;
+            updateNavigation(order[index]);
+        }, 90);
+    }, { passive: true });
 
-}, { passive: false });
+    // Convert a vertical mouse wheel gesture into horizontal page movement.
+    container.addEventListener('wheel', event => {
+        if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+            event.preventDefault();
+            container.scrollLeft += event.deltaY;
+        }
+    }, { passive: false });
+}
 
+// About-page event blocks open the Explore Events page and focus the chosen event.
+document.querySelectorAll('[data-event-target]').forEach(button => {
+    button.addEventListener('click', () => {
+        const targetId = button.dataset.eventTarget;
+        go('events');
+        window.setTimeout(() => {
+            const target = document.getElementById(targetId);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+                target.classList.add('event-highlight');
+                window.setTimeout(() => target.classList.remove('event-highlight'), 1400);
+            }
+        }, 450);
+    });
+});
 
-// REGISTRATION AND WHATSAPP LINKS
-
+// Replace these placeholders with the actual Google Form and WhatsApp invite URLs.
 const links = {
-
-    xwarfareRegistration: 'PASTE_X_WARFARE_REGISTRATION_LINK',
-
+    xwarfareRegistration: 'PASTE_X_WARFARE_GOOGLE_FORM_LINK',
     xwarfareWhatsApp: 'PASTE_X_WARFARE_WHATSAPP_LINK',
-
-    xpressionRegistration: 'PASTE_XPRESSION_REGISTRATION_LINK',
-
+    xpressionRegistration: 'PASTE_XPRESSION_GOOGLE_FORM_LINK',
     xpressionWhatsApp: 'PASTE_XPRESSION_WHATSAPP_LINK',
-
-    lastSuspectRegistration: 'PASTE_LAST_SUSPECT_REGISTRATION_LINK',
-
+    lastSuspectRegistration: 'PASTE_LAST_SUSPECT_GOOGLE_FORM_LINK',
     lastSuspectWhatsApp: 'PASTE_LAST_SUSPECT_WHATSAPP_LINK'
-
 };
-
 
 const qrs = {
-
     xwarfareQR: '',
-
     xpressionQR: '',
-
     lastSuspectQR: ''
-
 };
 
-
-// ADD LINKS TO EVENT BUTTONS
-
 document.querySelectorAll('[data-link]').forEach(link => {
-
     const url = links[link.dataset.link];
-
     if (url && !url.startsWith('PASTE_')) {
-
         link.href = url;
-
         link.target = '_blank';
-
         link.rel = 'noopener noreferrer';
-
     } else {
-
+        link.href = '#';
         link.addEventListener('click', event => {
-
             event.preventDefault();
-
-            alert('This event link will be added soon.');
-
+            alert('The organiser will add this registration or WhatsApp link soon.');
         });
-
     }
-
 });
-
-
-// ADD WHATSAPP QR CODES
 
 document.querySelectorAll('[data-qr]').forEach(element => {
-
     const source = qrs[element.dataset.qr];
-
     if (source) {
-
         const image = document.createElement('img');
-
         image.src = source;
-
-        image.alt = 'WhatsApp QR code';
-
+        image.alt = 'WhatsApp group QR code';
         element.replaceWith(image);
-
     }
-
 });
 
-
-// SET INITIAL PAGE
-
+// Start on Home and keep the current page aligned after resizing.
 go('home');
-
-
-// KEEP NAVIGATION CORRECT WHEN WINDOW RESIZES
-
 window.addEventListener('resize', () => {
-
-    go(order[index]);
-
+    if (container) container.scrollTo({ left: index * container.clientWidth, behavior: 'auto' });
 });
