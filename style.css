@@ -1409,3 +1409,31 @@ footer {
     }
     .find-us-social { margin-top: 8px; }
 }
+
+/* REMOVE OLD HOME PAGE DECORATIONS */
+
+.hero-panel .planet,
+.hero-panel .hero-words,
+.hero-panel .bubble,
+.hero-panel .hero-image-overlay {
+    display: none !important;
+}
+
+/* SHOW THE NEW COSMICKON IMAGE */
+
+.hero-panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-panel .hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    z-index: 1;
+}
+
