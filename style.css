@@ -1485,5 +1485,179 @@ footer {
     text-shadow: none !important;
 }
 
+/* =====================================
+   UPDATED CONTACT PAGE
+===================================== */
+
+.contact {
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+}
+
+.contact-paper {
+    width: min(820px, 90%);
+    min-height: 65%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Issue 05 label */
+.contact-paper label {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 3;
+    font-size: .75rem;
+}
+
+/* Yellow star */
+.shout {
+    position: absolute;
+    left: 9%;
+    top: 35%;
+    width: 135px;
+    height: 135px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #f4d34e;
+    clip-path: polygon(
+        50% 0, 62% 28%, 94% 8%, 78% 42%,
+        100% 55%, 72% 66%, 88% 98%, 55% 80%,
+        43% 100%, 34% 72%, 5% 88%, 20% 56%,
+        0 42%, 31% 33%
+    );
+    font: 1.8rem Bangers, cursive;
+    color: #21172b;
+    z-index: 2;
+}
+
+/* Contact information */
+.contact-copy {
+    margin-left: 130px;
+    max-width: 430px;
+    position: relative;
+    z-index: 3;
+}
+
+.contact-copy h1 {
+    font-size: 2.6rem;
+    margin: 8px 0;
+    line-height: 1.1;
+}
+
+.contact-copy p {
+    font-size: .9rem;
+    line-height: 1.6;
+}
+
+.contact-copy small {
+    display: block;
+    font-weight: 900;
+    font-size: .65rem;
+    margin-top: 18px;
+}
+
+.contact-copy h2.contact-thanks {
+    font: 2.3rem Bangers, cursive;
+    color: #e94a98;
+    margin-top: 20px;
+    text-shadow: 2px 2px #21172b;
+}
+
+.phone {
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}
+
+.whatsapp {
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.location {
+    font-size: .75rem;
+    color: #e5d9ed;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.location b {
+    color: #f4d34e;
+    margin-right: 10px;
+}
+
+.find-us-social {
+    display: block;
+    margin-top: 7px;
+    font-weight: 800;
+}
+
+.find-us-social a {
+    color: #ff91c3;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Mobile contact page */
+@media (max-width: 700px) {
+
+    .contact {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .contact-paper {
+        width: 100%;
+        min-height: 390px;
+        padding: 15px;
+        justify-content: flex-start;
+    }
+
+    .contact-paper label {
+        top: 15px;
+        left: 15px;
+        font-size: .55rem;
+    }
+
+    .contact-copy {
+        margin-left: 0;
+        margin-top: 85px;
+        max-width: 100%;
+    }
+
+    .contact-copy h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-copy p {
+        font-size: .78rem;
+    }
+
+    .shout {
+        width: 85px;
+        height: 85px;
+        font-size: 1.2rem;
+        left: auto;
+        right: 12%;
+        top: 12%;
+    }
+
+    .contact-copy h2.contact-thanks {
+        font-size: 2rem;
+    }
+
+    .location {
+        font-size: .62rem;
+    }
+}
+
 
 
