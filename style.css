@@ -1,3 +1,1243 @@
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{display:flex;flex-direction:column;background:#171323;color:#fff;font-family:'DM Sans',sans-serif;background-image:radial-gradient(#ffffff12 1px,transparent 1px);background-size:14px 14px}button,a{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}header{flex:none;background:#21192e;border-bottom:3px solid #08060d;z-index:5}.institutions{height:32px;background:#f4d34e;color:#21172b;display:flex;justify-content:center;align-items:center;gap:18px;font-size:.68rem;font-weight:900;letter-spacing:2px}.bar{height:65px;padding:0 5%;display:flex;align-items:center;justify-content:space-between}.logo{font:2rem Bangers;letter-spacing:2px}.logo span{color:#f04b9a}nav{display:flex;gap:7px}nav button{background:none;border:0;color:#eee;padding:10px 12px;border-radius:5px;font-weight:800;font-size:.8rem}nav button:hover,nav button.active{background:#f04b9a;color:white;box-shadow:3px 3px #09060f;transform:rotate(-2deg)}.menu{display:none;background:none;border:0;color:white;font-size:1.5rem}main{width:min(1200px,94%);flex:1;min-height:0;margin:auto;position:relative;padding:15px 0}.page{display:none;height:100%;min-height:0;animation:appear .3s ease}.page.active{display:flex;flex-direction:column;justify-content:center}@keyframes appear{from{opacity:0;transform:translateX(15px)}to{opacity:1;transform:none}}label{display:inline-block;background:#ff91c3;color:#21172b;padding:6px 10px;border:2px solid #09060f;box-shadow:3px 3px #09060f;font-size:.65rem;font-weight:900;letter-spacing:1px;transform:rotate(-1deg)}h1,h2,.logo{font-family:Bangers,cursive;letter-spacing:1px}h1{font-size:clamp(3rem,6vw,5.7rem);line-height:.9;margin:15px 0}h1 em{font-style:normal;color:#f04b9a;text-shadow:4px 4px #09060f}.home{flex-direction:row!important;align-items:center;gap:4%;padding:2%}.copy{width:54%}.copy h2{font:700 1.05rem 'DM Sans';color:#f4d34e}.copy p{max-width:520px;color:#ddd2e8;line-height:1.6;font-size:.9rem}.cta{display:inline-block;background:#f04b9a;color:white;border:3px solid #09060f;box-shadow:4px 4px #09060f;padding:12px 17px;font-weight:900;font-size:.78rem;margin-top:15px}.date{display:flex;flex-direction:column;margin-top:25px;color:#f4d34e;font-weight:800}.date small{font-size:.65rem;color:#cfc2d9;letter-spacing:1px}.hero-panel{width:42%;height:75%;min-height:260px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(140deg,#f4d34e,#f39ac4 60%,#9d7be1);border:4px solid #09060f;box-shadow:7px 7px #0008;transform:rotate(1deg);color:#21172b}.planet{width:43%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff2b0,#eb80b8 50%,#754ba8);border:4px solid #21172b;box-shadow:0 0 0 24px #ffffff35}.hero-words{position:absolute;text-align:center;display:flex;flex-direction:column;gap:8px;text-shadow:2px 2px #fff8}.hero-words strong{font:clamp(3rem,5vw,5rem)/.8 Bangers}.hero-words small{font-size:.6rem;font-weight:900;letter-spacing:1.5px}.bubble{position:absolute;right:4%;top:8%;background:white;border:3px solid #21172b;border-radius:50%;padding:13px;text-align:center;font:1rem Bangers;transform:rotate(8deg)}.lead{color:#d9cee4;margin:0 0 15px}.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px;min-height:0}.paper,.mini,.contact-paper{background:#fff7e8;color:#21172b;border:3px solid #09060f;box-shadow:5px 5px #0008}.paper{padding:22px;display:flex;flex-direction:column;justify-content:center;gap:10px}.paper h2{font-size:2.5rem;line-height:.95}.paper h2 em{color:#e94a98;font-style:normal}.paper p{font-size:.82rem;line-height:1.5}.stack{display:grid;gap:9px}.mini{padding:12px 17px;display:flex;flex-direction:column;justify-content:center}.mini b{font-size:.6rem}.mini strong{font:1.6rem Bangers}.mini span{font-size:.7rem}.blue{background:#8ed8ff}.pink{background:#ff9bc9}.purple{background:#c4a4ff}.events{gap:10px}.events h1{margin:7px 0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;flex:1;min-height:0}.event{background:#fff7e8;color:#21172b;border:3px solid #09060f;box-shadow:5px 5px #0008;display:flex;flex-direction:column;min-width:0;overflow:hidden}.art{height:105px;flex:none;display:grid;place-items:center;position:relative;font:4rem Bangers;color:white;text-shadow:4px 4px #21172b;border-bottom:3px solid #09060f}.art small{position:absolute;bottom:5px;right:8px;font:700 .5rem 'DM Sans';letter-spacing:1px}.details{padding:10px 12px;display:flex;flex-direction:column;flex:1;min-height:0}.details>small{font-size:.55rem;font-weight:900}.details h2{font-size:1.6rem;margin:0}.details b{font-size:.6rem}.details p{font-size:.65rem;margin:3px 0}.actions{display:flex;gap:6px;margin-top:8px}.actions a{background:#f04b9a;color:white;border:2px solid #21172b;box-shadow:2px 2px #21172b;padding:6px 5px;text-align:center;flex:1;font-size:.55rem;font-weight:900}.actions a+ a{background:white;color:#21172b}.qr{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:7px;font-size:.58rem;font-weight:700}.qr div,.qr img{width:43px;height:43px;background:white;border:2px dashed #756580;display:grid;place-items:center;font-size:.45rem;object-fit:contain}.schedule{display:grid;grid-template-columns:1fr 1fr;gap:15px;min-height:0}.schedule .paper{padding:15px}.schedule h2{font-size:1.4rem;background:#8ed8ff;padding:6px;margin-bottom:7px}.schedule h2 small{float:right;font:800 .58rem 'DM Sans';padding-top:6px}.schedule .paper:nth-child(2) h2{background:#ff9bc9}.schedule p{border-bottom:1px solid #21172b22;padding:7px 0;font-size:.68rem}.schedule p:last-child{border:0}.schedule p b{display:inline-block;min-width:115px}.notice{background:#f4d34e;color:#21172b;border:3px solid #09060f;box-shadow:4px 4px #0008;padding:9px 13px;margin-top:12px;font-size:.7rem}.notice b{font-family:Bangers;font-size:1.1rem;margin-right:12px}.tentative{font-size:.58rem;color:#c9bed4;margin-top:7px}.contact{align-items:center;gap:13px}.contact-paper{width:min(820px,90%);min-height:65%;position:relative;display:flex;align-items:center;justify-content:center;padding:25px;overflow:hidden}.contact-copy{margin-left:130px;max-width:430px}.contact-copy h1{font-size:4.5rem;margin:10px 0}.contact-copy p{font-size:.8rem}.contact-copy small{display:block;font-weight:900;font-size:.6rem;margin-top:18px}.contact-copy h2{font-size:2rem;margin:3px 0}.phone{display:block;font-weight:800;font-size:1.1rem}.shout{position:absolute;left:8%;top:35%;width:145px;height:145px;display:grid;place-items:center;text-align:center;background:#f4d34e;clip-path:polygon(50% 0,62% 28%,94% 8%,78% 42%,100% 55%,72% 66%,88% 98%,55% 80%,43% 100%,34% 72%,5% 88%,20% 56%,0 42%,31% 33%);font:2rem Bangers;color:#21172b}.whatsapp{font-size:.65rem}.location{font-size:.7rem;color:#e5d9ed}.location b{color:#f4d34e;margin-right:10px}footer{height:45px;flex:none;background:#100d18;border-top:1px solid #ffffff30;display:flex;align-items:center;justify-content:space-between;padding:0 5%;font-size:.62rem;letter-spacing:1px}#count{font-weight:900}.dots{display:flex;gap:9px}.dots button{width:9px;height:9px;border:1px solid #ddd;border-radius:50%;background:none;padding:0}.dots button.selected{background:#f04b9a;border-color:#f04b9a}.arrows{display:flex;gap:7px}.arrows button{background:none;border:1px solid #85748f;color:white;padding:5px 8px;font-size:.58rem}.arrows button:disabled{opacity:.3}
-@media(max-width:700px){.institutions{font-size:.52rem;gap:8px}.bar{height:54px;padding:0 4%}.menu{display:block}nav{display:none;position:absolute;top:86px;left:3%;right:3%;background:#241b31;border:2px solid #09060f;padding:8px;flex-direction:column}nav.open{display:flex}nav button{text-align:left}.home{flex-direction:column!important;justify-content:center;gap:10px}.copy{width:100%}.copy h1{font-size:clamp(2.7rem,11vw,4rem);margin:10px 0}.copy p{font-size:.72rem}.copy h2{font-size:.8rem}.cta{margin-top:8px;padding:8px 11px}.date{margin-top:9px;font-size:.8rem}.hero-panel{width:100%;height:31%;min-height:130px}.hero-words strong{font-size:2.6rem}.bubble{font-size:.65rem;padding:7px}.about-grid{grid-template-columns:1fr;gap:8px}.paper{padding:12px}.paper p{font-size:.66rem}.paper h2{font-size:1.9rem}.stack{grid-template-columns:repeat(3,1fr);gap:5px}.mini{padding:6px}.mini strong{font-size:1.05rem}.mini span{font-size:.5rem}.mini b{font-size:.45rem}.events h1{font-size:2.6rem}.cards{gap:5px}.art{height:60px;font-size:2.3rem}.art small{font-size:.35rem}.details{padding:5px}.details h2{font-size:1rem}.details>small,.details b{font-size:.42rem}.details p{font-size:.47rem}.actions{gap:3px;margin-top:5px}.actions a{font-size:.4rem;padding:4px 2px}.qr{font-size:.42rem;gap:4px}.qr div,.qr img{width:28px;height:28px;font-size:.35rem}.schedule{grid-template-columns:1fr;gap:7px}.schedule .paper{padding:8px}.schedule h2{font-size:1rem;padding:4px}.schedule h2 small{font-size:.45rem}.schedule p{font-size:.5rem;padding:4px 0}.schedule p b{min-width:90px}.notice{font-size:.52rem;padding:6px}.notice b{font-size:.9rem}.contact-paper{width:98%;min-height:65%;padding:12px}.contact-copy{margin-left:65px}.contact-copy h1{font-size:3rem}.contact-copy p{font-size:.62rem}.contact-copy h2{font-size:1.5rem}.contact-copy small{font-size:.45rem}.shout{width:85px;height:85px;font-size:1.3rem;left:2%}.location{font-size:.53rem}footer{height:40px;padding:0 3%;font-size:.5rem}.dots{gap:6px}.dots button{width:7px;height:7px}.arrows button{font-size:.48rem;padding:4px}}
-@media(max-height:620px) and (min-width:701px){.bar{height:52px}.home h1{font-size:3.7rem}.hero-panel{height:90%;min-height:0}.page{transform:scale(.96)}.details{padding:6px}.art{height:70px}.schedule .paper{padding:9px}.schedule p{padding:4px 0}}
+
+/* =====================================
+   1. GLOBAL SETTINGS
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: #171323;
+    color: #fff;
+    font-family: 'DM Sans', sans-serif;
+    background-image: radial-gradient(#ffffff12 1px, transparent 1px);
+    background-size: 14px 14px;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =====================================
+   2. HEADER
+===================================== */
+
+header {
+    flex: none;
+    background: #21192e;
+    border-bottom: 3px solid #08060d;
+    z-index: 10;
+}
+
+.institutions {
+    min-height: 32px;
+    background: #f4d34e;
+    color: #21172b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 5px 10px;
+    font-size: .68rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.bar {
+    min-height: 65px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: 2rem Bangers, cursive;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #f04b9a;
+}
+
+nav {
+    display: flex;
+    gap: 7px;
+}
+
+nav button {
+    background: none;
+    border: 0;
+    color: #eee;
+    padding: 10px 12px;
+    border-radius: 5px;
+    font-weight: 800;
+    font-size: .8rem;
+}
+
+nav button:hover,
+nav button.active {
+    background: #f04b9a;
+    color: white;
+    box-shadow: 3px 3px #09060f;
+    transform: rotate(-2deg);
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/* =====================================
+   3. HORIZONTAL PAGE CONTAINER
+===================================== */
+
+.pages-container {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.pages-container::-webkit-scrollbar {
+    display: none;
+}
+
+.page {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    padding: 20px 5%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f04b9a #21192e;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    animation: appear .3s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: .7;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================
+   4. COMMON TEXT
+===================================== */
+
+label {
+    display: inline-block;
+    width: fit-content;
+    background: #ff91c3;
+    color: #21172b;
+    padding: 6px 10px;
+    border: 2px solid #09060f;
+    box-shadow: 3px 3px #09060f;
+    font-size: .65rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transform: rotate(-1deg);
+}
+
+h1,
+h2,
+.logo {
+    font-family: Bangers, cursive;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(3rem, 6vw, 5.7rem);
+    line-height: .95;
+    margin: 12px 0;
+}
+
+h1 em {
+    font-style: normal;
+    color: #f04b9a;
+    text-shadow: 4px 4px #09060f;
+}
+
+.lead {
+    color: #d9cee4;
+    margin: 0 0 12px;
+}
+
+
+/* =====================================
+   5. HOME PAGE
+===================================== */
+
+.home {
+    flex-direction: row;
+    align-items: center;
+    gap: 4%;
+}
+
+.copy {
+    width: 54%;
+}
+
+.copy h2 {
+    font: 700 1.05rem 'DM Sans', sans-serif;
+    color: #f4d34e;
+}
+
+.copy p {
+    max-width: 520px;
+    color: #ddd2e8;
+    line-height: 1.7;
+    font-size: .95rem;
+}
+
+.cta {
+    display: inline-block;
+    background: #f04b9a;
+    color: white;
+    border: 3px solid #09060f;
+    box-shadow: 4px 4px #09060f;
+    padding: 12px 17px;
+    font-weight: 900;
+    font-size: .8rem;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    color: #f4d34e;
+    font-weight: 800;
+}
+
+.date small {
+    font-size: .65rem;
+    color: #cfc2d9;
+    letter-spacing: 1px;
+}
+
+.hero-panel {
+    width: 42%;
+    height: 75%;
+    min-height: 260px;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: linear-gradient(140deg, #f4d34e, #f39ac4 60%, #9d7be1);
+    border: 4px solid #09060f;
+    box-shadow: 7px 7px #0008;
+    transform: rotate(1deg);
+    color: #21172b;
+}
+
+.planet {
+    width: 43%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #fff2b0, #eb80b8 50%, #754ba8);
+    border: 4px solid #21172b;
+    box-shadow: 0 0 0 24px #ffffff35;
+}
+
+.hero-words {
+    position: absolute;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-shadow: 2px 2px #fff8;
+}
+
+.hero-words strong {
+    font: clamp(3rem, 5vw, 5rem)/.8 Bangers, cursive;
+}
+
+.hero-words small {
+    font-size: .6rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.bubble {
+    position: absolute;
+    right: 4%;
+    top: 8%;
+    background: white;
+    border: 3px solid #21172b;
+    border-radius: 50%;
+    padding: 13px;
+    text-align: center;
+    font: 1rem Bangers, cursive;
+    transform: rotate(8deg);
+}
+
+
+/* =====================================
+   6. ABOUT PAGE
+===================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 18px;
+    min-height: 0;
+}
+
+.paper,
+.mini,
+.contact-paper {
+    background: #fff7e8;
+    color: #21172b;
+    border: 3px solid #09060f;
+    box-shadow: 5px 5px #0008;
+}
+
+.paper {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.paper h2 {
+    font-size: 2.5rem;
+    line-height: .95;
+}
+
+.paper h2 em {
+    color: #e94a98;
+    font-style: normal;
+}
+
+.paper p {
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.stack {
+    display: grid;
+    gap: 9px;
+}
+
+.mini {
+    padding: 12px 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mini b {
+    font-size: .6rem;
+}
+
+.mini strong {
+    font: 1.6rem Bangers, cursive;
+}
+
+.mini span {
+    font-size: .7rem;
+}
+
+.blue {
+    background: #8ed8ff;
+}
+
+.pink {
+    background: #ff9bc9;
+}
+
+.purple {
+    background: #c4a4ff;
+}
+
+
+/* =====================================
+   7. EVENTS PAGE
+===================================== */
+
+.events {
+    gap: 12px;
+}
+
+.events h1 {
+    margin: 7px 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+    flex: 1;
+    min-height: 0;
+}
+
+.event {
+    background: #fff7e8;
+    color: #21172b;
+    border: 3px solid #09060f;
+    box-shadow: 5px 5px #0008;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.art {
+    min-height: 105px;
+    flex: none;
+    display: grid;
+    place-items: center;
+    position: relative;
+    font: 4rem Bangers, cursive;
+    color: white;
+    text-shadow: 4px 4px #21172b;
+    border-bottom: 3px solid #09060f;
+}
+
+.art small {
+    position: absolute;
+    bottom: 5px;
+    right: 8px;
+    font: 700 .5rem 'DM Sans', sans-serif;
+    letter-spacing: 1px;
+}
+
+.details {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+}
+
+.details > small {
+    font-size: .6rem;
+    font-weight: 900;
+}
+
+.details h2 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+.details b {
+    font-size: .65rem;
+}
+
+.details p {
+    font-size: .7rem;
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.actions a {
+    background: #f04b9a;
+    color: white;
+    border: 2px solid #21172b;
+    box-shadow: 2px 2px #21172b;
+    padding: 7px 5px;
+    text-align: center;
+    flex: 1;
+    font-size: .6rem;
+    font-weight: 900;
+}
+
+.actions a + a {
+    background: white;
+    color: #21172b;
+}
+
+.qr {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 8px;
+    font-size: .6rem;
+    font-weight: 700;
+}
+
+.qr div,
+.qr img {
+    width: 48px;
+    height: 48px;
+    background: white;
+    border: 2px dashed #756580;
+    display: grid;
+    place-items: center;
+    font-size: .45rem;
+    object-fit: contain;
+}
+
+
+/* =====================================
+   8. SCHEDULE PAGE
+===================================== */
+
+.schedule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    min-height: 0;
+}
+
+.schedule .paper {
+    padding: 15px;
+}
+
+.schedule h2 {
+    font-size: 1.4rem;
+    background: #8ed8ff;
+    padding: 8px;
+    margin-bottom: 7px;
+}
+
+.schedule h2 small {
+    float: right;
+    font: 800 .58rem 'DM Sans', sans-serif;
+    padding-top: 6px;
+}
+
+.schedule .paper:nth-child(2) h2 {
+    background: #ff9bc9;
+}
+
+.schedule p {
+    border-bottom: 1px solid #21172b22;
+    padding: 8px 0;
+    font-size: .7rem;
+    line-height: 1.5;
+}
+
+.schedule p:last-child {
+    border: 0;
+}
+
+.schedule p b {
+    display: inline-block;
+    min-width: 115px;
+}
+
+.notice {
+    background: #f4d34e;
+    color: #21172b;
+    border: 3px solid #09060f;
+    box-shadow: 4px 4px #0008;
+    padding: 10px 13px;
+    margin-top: 12px;
+    font-size: .72rem;
+}
+
+.notice b {
+    font-family: Bangers, cursive;
+    font-size: 1.1rem;
+    margin-right: 12px;
+}
+
+.tentative {
+    font-size: .6rem;
+    color: #c9bed4;
+    margin-top: 7px;
+}
+
+
+/* =====================================
+   9. CONTACT PAGE
+===================================== */
+
+.contact {
+    align-items: center;
+    gap: 13px;
+}
+
+.contact-paper {
+    width: min(820px, 90%);
+    min-height: 65%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    overflow: hidden;
+}
+
+.contact-copy {
+    margin-left: 130px;
+    max-width: 430px;
+}
+
+.contact-copy h1 {
+    font-size: 4.5rem;
+    margin: 10px 0;
+}
+
+.contact-copy p {
+    font-size: .85rem;
+    line-height: 1.6;
+}
+
+.contact-copy small {
+    display: block;
+    font-weight: 900;
+    font-size: .6rem;
+    margin-top: 18px;
+}
+
+.contact-copy h2 {
+    font-size: 2rem;
+    margin: 3px 0;
+}
+
+.phone {
+    display: block;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+.shout {
+    position: absolute;
+    left: 8%;
+    top: 35%;
+    width: 145px;
+    height: 145px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background: #f4d34e;
+    clip-path: polygon(
+        50% 0, 62% 28%, 94% 8%, 78% 42%,
+        100% 55%, 72% 66%, 88% 98%, 55% 80%,
+        43% 100%, 34% 72%, 5% 88%, 20% 56%,
+        0 42%, 31% 33%
+    );
+    font: 2rem Bangers, cursive;
+    color: #21172b;
+}
+
+.whatsapp {
+    font-size: .65rem;
+}
+
+.location {
+    font-size: .7rem;
+    color: #e5d9ed;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.location b {
+    color: #f4d34e;
+    margin-right: 10px;
+}
+
+
+/* =====================================
+   10. FOOTER
+===================================== */
+
+footer {
+    min-height: 45px;
+    flex: none;
+    background: #100d18;
+    border-top: 1px solid #ffffff30;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: .62rem;
+    letter-spacing: 1px;
+}
+
+#count {
+    font-weight: 900;
+}
+
+.dots {
+    display: flex;
+    gap: 9px;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: none;
+    padding: 0;
+}
+
+.dots button.selected {
+    background: #f04b9a;
+    border-color: #f04b9a;
+}
+
+
+/* =====================================
+   11. TABLET RESPONSIVENESS
+===================================== */
+
+@media (min-width: 701px) and (max-width: 1000px) {
+
+    .bar {
+        padding: 0 3%;
+    }
+
+    nav {
+        gap: 2px;
+    }
+
+    nav button {
+        padding: 9px 7px;
+        font-size: .7rem;
+    }
+
+    .page {
+        padding: 18px 3%;
+    }
+
+    .details {
+        padding: 8px;
+    }
+
+    .details h2 {
+        font-size: 1.3rem;
+    }
+
+    .details p {
+        font-size: .62rem;
+    }
+
+    .actions a {
+        font-size: .5rem;
+    }
+
+}
+
+
+/* =====================================
+   12. MOBILE RESPONSIVENESS
+===================================== */
+
+@media (max-width: 700px) {
+
+    html,
+    body {
+        overflow: hidden;
+    }
+
+    .institutions {
+        min-height: 30px;
+        gap: 6px;
+        font-size: .48rem;
+        letter-spacing: 1px;
+        padding: 5px;
+    }
+
+    .bar {
+        min-height: 55px;
+        padding: 0 4%;
+    }
+
+    .logo {
+        font-size: 1.7rem;
+    }
+
+    .menu {
+        display: block;
+        padding: 5px 10px;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 3%;
+        right: 3%;
+        background: #241b31;
+        border: 2px solid #09060f;
+        padding: 10px;
+        flex-direction: column;
+        z-index: 20;
+        box-shadow: 4px 4px #0008;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav button {
+        text-align: left;
+        font-size: .9rem;
+        padding: 12px;
+    }
+
+    .page {
+        padding: 18px 5%;
+        gap: 12px;
+    }
+
+    label {
+        font-size: .58rem;
+        padding: 5px 8px;
+    }
+
+    h1 {
+        font-size: clamp(2.5rem, 10vw, 3.8rem);
+    }
+
+
+    /* MOBILE HOME */
+
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .copy {
+        width: 100%;
+    }
+
+    .copy h1 {
+        font-size: clamp(2.7rem, 11vw, 4rem);
+        margin: 12px 0;
+    }
+
+    .copy h2 {
+        font-size: .8rem;
+        line-height: 1.5;
+    }
+
+    .copy p {
+        font-size: .82rem;
+        line-height: 1.6;
+    }
+
+    .cta {
+        margin-top: 10px;
+        padding: 10px 13px;
+        font-size: .72rem;
+    }
+
+    .date {
+        margin-top: 14px;
+        font-size: .8rem;
+    }
+
+    .date small {
+        font-size: .58rem;
+    }
+
+    .hero-panel {
+        width: 100%;
+        height: 230px;
+        min-height: 180px;
+        flex: none;
+    }
+
+    .hero-words strong {
+        font-size: 3rem;
+    }
+
+    .hero-words small {
+        font-size: .55rem;
+    }
+
+    .bubble {
+        font-size: .7rem;
+        padding: 8px;
+    }
+
+
+    /* MOBILE ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .paper {
+        padding: 15px;
+    }
+
+    .paper p {
+        font-size: .78rem;
+        line-height: 1.5;
+    }
+
+    .paper h2 {
+        font-size: 2rem;
+    }
+
+    .stack {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .mini {
+        padding: 12px;
+    }
+
+    .mini strong {
+        font-size: 1.4rem;
+    }
+
+    .mini span {
+        font-size: .7rem;
+    }
+
+    .mini b {
+        font-size: .55rem;
+    }
+
+
+    /* MOBILE EVENTS */
+
+    .events {
+        gap: 12px;
+    }
+
+    .events h1 {
+        font-size: 2.7rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        flex: none;
+    }
+
+    .event {
+        min-height: 340px;
+    }
+
+    .art {
+        min-height: 110px;
+        font-size: 3.5rem;
+    }
+
+    .art small {
+        font-size: .5rem;
+    }
+
+    .details {
+        padding: 12px;
+    }
+
+    .details h2 {
+        font-size: 1.6rem;
+    }
+
+    .details > small {
+        font-size: .58rem;
+    }
+
+    .details b {
+        font-size: .65rem;
+    }
+
+    .details p {
+        font-size: .75rem;
+        margin: 4px 0;
+    }
+
+    .actions {
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .actions a {
+        font-size: .65rem;
+        padding: 8px 5px;
+    }
+
+    .qr {
+        font-size: .65rem;
+        gap: 8px;
+    }
+
+    .qr div,
+    .qr img {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    /* MOBILE SCHEDULE */
+
+    .schedule {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .schedule .paper {
+        padding: 12px;
+    }
+
+    .schedule h2 {
+        font-size: 1.2rem;
+        padding: 7px;
+    }
+
+    .schedule h2 small {
+        font-size: .5rem;
+    }
+
+    .schedule p {
+        font-size: .68rem;
+        padding: 7px 0;
+    }
+
+    .schedule p b {
+        min-width: 100px;
+    }
+
+    .notice {
+        font-size: .62rem;
+        padding: 8px;
+        line-height: 1.5;
+    }
+
+    .notice b {
+        font-size: 1rem;
+    }
+
+    .tentative {
+        font-size: .55rem;
+    }
+
+
+    /* MOBILE CONTACT */
+
+    .contact {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact-paper {
+        width: 100%;
+        min-height: 390px;
+        padding: 15px;
+        justify-content: flex-start;
+    }
+
+    .contact-paper label {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+    }
+
+    .contact-copy {
+        margin-left: 0;
+        margin-top: 65px;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-copy h1 {
+        font-size: 3.4rem;
+    }
+
+    .contact-copy p {
+        font-size: .78rem;
+        line-height: 1.6;
+    }
+
+    .contact-copy small {
+        font-size: .55rem;
+        margin-top: 15px;
+    }
+
+    .contact-copy h2 {
+        font-size: 1.7rem;
+    }
+
+    .phone {
+        font-size: 1rem;
+    }
+
+    .shout {
+        width: 95px;
+        height: 95px;
+        font-size: 1.3rem;
+        left: auto;
+        right: 8%;
+        top: 12%;
+        opacity: .85;
+    }
+
+    .whatsapp {
+        font-size: .62rem;
+    }
+
+    .location {
+        font-size: .62rem;
+        line-height: 1.6;
+    }
+
+
+    /* MOBILE FOOTER */
+
+    footer {
+        min-height: 43px;
+        padding: 0 4%;
+        font-size: .52rem;
+    }
+
+    .dots {
+        gap: 8px;
+    }
+
+    .dots button {
+        width: 9px;
+        height: 9px;
+    }
+
+}
+
+
+/* =====================================
+   13. SMALL PHONE SCREENS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .institutions {
+        font-size: .42rem;
+        gap: 4px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .copy h1 {
+        font-size: 2.6rem;
+    }
+
+    .copy p {
+        font-size: .75rem;
+    }
+
+    .hero-panel {
+        height: 190px;
+    }
+
+    .events h1 {
+        font-size: 2.3rem;
+    }
+
+    .contact-copy h1 {
+        font-size: 2.8rem;
+    }
+
+    footer {
+        padding: 0 3%;
+    }
+
+    .dots {
+        gap: 6px;
+    }
+
+}
+
+
+/* =====================================
+   14. SHORT DESKTOP SCREENS
+===================================== */
+
+@media (min-width: 701px) and (max-height: 650px) {
+
+    .bar {
+        min-height: 52px;
+    }
+
+    .page {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        gap: 8px;
+    }
+
+    .home h1 {
+        font-size: 3.7rem;
+    }
+
+    .hero-panel {
+        height: 85%;
+        min-height: 0;
+    }
+
+    .art {
+        min-height: 70px;
+    }
+
+    .details {
+        padding: 7px;
+    }
+
+    .schedule .paper {
+        padding: 9px;
+    }
+
+    .schedule p {
+        padding: 4px 0;
+    }
+
+}
