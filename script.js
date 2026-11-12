@@ -78,12 +78,12 @@ document.querySelectorAll('[data-event-target]').forEach(button => {
 
 // Replace these placeholders with the actual Google Form and WhatsApp invite URLs.
 const links = {
-    xwarfareRegistration: 'PASTE_X_WARFARE_GOOGLE_FORM_LINK',
-    xwarfareWhatsApp: 'PASTE_X_WARFARE_WHATSAPP_LINK',
-    xpressionRegistration: 'PASTE_XPRESSION_GOOGLE_FORM_LINK',
-    xpressionWhatsApp: 'PASTE_XPRESSION_WHATSAPP_LINK',
-    lastSuspectRegistration: 'PASTE_LAST_SUSPECT_GOOGLE_FORM_LINK',
-    lastSuspectWhatsApp: 'PASTE_LAST_SUSPECT_WHATSAPP_LINK'
+    xwarfareRegistration: 'https://forms.gle/7cXj7M76yuXrhgdK6',
+    xwarfareWhatsApp: 'https://chat.whatsapp.com/EE0NamGqUjBA2yoWl1MRDF',
+    xpressionRegistration: 'https://forms.gle/7v9A2B4HCWA2hjJr5',
+    xpressionWhatsApp: 'https://chat.whatsapp.com/CFV1Yj3yEjgGSwikFgeEmt',
+    lastSuspectRegistration: 'https://forms.gle/ML8yXiGJ9R3BZkTX7',
+    lastSuspectWhatsApp: 'https://chat.whatsapp.com/F1YqAMuGJxY2NrvCGcJO6D'
 };
 
 const qrs = {
